@@ -1,16 +1,11 @@
 'use strict'
 
-function Main (input) {
-  const tmp = input.split('\n')
-  const k = input
-  let cnt = 0
+const main = (INPUT) => {
+  const input = INPUT.split('\n')[0].split(' ').map(n => Number(n))
+  const X = input[2] - input[0]
+  const Y = input[3] - input[1]
 
-  for (let i = 2; i <= k; i += 2) {
-    for (let j = 1; j <= k; j += 2) {
-      cnt++
-    }
-  }
-  console.log(cnt)
+  console.log(input[2] - Y, input[3] + X, input[0] - Y, input[1] + X)
 }
-//* この行以降は編集しないでください（標準入出力から一度に読み込み、Mainを呼び出します）
-Main(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
+main(require('fs').readFileSync('/dev/stdin', 'utf8'))
