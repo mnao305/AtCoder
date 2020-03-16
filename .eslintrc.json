@@ -1,3 +1,7 @@
 {
-  "extends": "standard"
+  "extends": "standard",
+  "rules": {
+    "eqeqeq": "off",
+    "no-eval": "off"
+}
 }
